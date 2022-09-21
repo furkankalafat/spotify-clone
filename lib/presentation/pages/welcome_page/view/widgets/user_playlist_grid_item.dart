@@ -15,9 +15,7 @@ class UserPlaylistGridItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClickableContainer(
-      onTap: (() {
-        print(index);
-      }),
+      onTap: (() {}),
       child: Container(
         width: 167.w,
         decoration: BoxDecoration(

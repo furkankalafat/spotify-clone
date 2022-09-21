@@ -16,6 +16,7 @@ class FeaturedPlaylistGridBuilder extends StatelessWidget {
     return SizedBox(
       height: 210.h,
       child: ListView.separated(
+          padding: const EdgeInsets.only(left: 16, right: 16),
           separatorBuilder: (context, index) {
             return SizedBox(
               width: 16.w,

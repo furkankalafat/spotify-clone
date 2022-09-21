@@ -17,18 +17,16 @@ class NamedGridList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(
-              text ?? "",
-              style: GoogleFonts.openSans(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 20.sp,
-              ),
+        Padding(
+          padding: const EdgeInsets.only(left: 16),
+          child: Text(
+            text ?? "",
+            style: GoogleFonts.openSans(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 20.sp,
             ),
-          ],
+          ),
         ),
         SizedBox(
           height: 25.h,

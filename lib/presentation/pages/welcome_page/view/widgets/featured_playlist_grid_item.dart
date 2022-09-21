@@ -22,10 +22,10 @@ class FeaturedPlaylistGridItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            width: 152.w,
-            height: 152.h,
             child: Image.asset(
               "assets/images/profile_photo.png",
+              width: 152.w,
+              height: 152.h,
               fit: BoxFit.cover,
             ),
           ),
