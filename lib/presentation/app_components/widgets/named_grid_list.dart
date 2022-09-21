@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/presentation/app_components/widgets/clickable_container.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class NamedWidget extends StatelessWidget {
+class NamedGridList extends StatelessWidget {
   final Widget? child;
   final String? text;
-  final TextStyle? textStyle;
-  final ClickableContainer? iconButton;
-  const NamedWidget({
+
+  const NamedGridList({
     Key? key,
     this.child,
     this.text,
-    this.textStyle,
-    this.iconButton,
   }) : super(key: key);
 
   @override
@@ -20,17 +18,20 @@ class NamedWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               text ?? "",
-              style: textStyle ?? const TextStyle(color: Colors.white),
+              style: GoogleFonts.openSans(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.sp,
+              ),
             ),
-            iconButton ?? const SizedBox(),
           ],
         ),
-        const SizedBox(
-          height: 16,
+        SizedBox(
+          height: 25.h,
         ),
         SizedBox(
           width: double.infinity,
