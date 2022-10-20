@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:spotify_clone/presentation/app_components/widgets/clickable_container.dart';
 import 'package:spotify_clone/presentation/app_components/widgets/named_widget.dart';
 import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
-import 'package:spotify_clone/presentation/app_ui/app_text/app_text.dart';
+import 'package:spotify_clone/presentation/app_ui/locale_text/locale_text.dart';
 import 'package:spotify_clone/presentation/pages/welcome_page/view/widgets/playlist_grid_builder.dart';
 
 class WelcomeView extends StatelessWidget {

@@ -5,5 +5,9 @@ class LocaleText {
   }
 
   LocaleText._init();
+
   final String welcomeText = "Good Morning";
+  final String searchTitle = "Search";
+  final String searchBarDescription = "Artists, songs or podcasts";
+  final String browseAll = "Browse all";
 }
