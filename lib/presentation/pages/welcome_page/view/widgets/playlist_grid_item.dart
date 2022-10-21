@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
-import 'package:spotify_clone/presentation/app_ui/locale_text/locale_text.dart';
+import 'package:spotify_clone/presentation/app_ui/app_text/app_text.dart';
 
 class PlaylistGridItem extends StatelessWidget {
   const PlaylistGridItem({Key? key}) : super(key: key);
