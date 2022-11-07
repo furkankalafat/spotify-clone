@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:spotify_clone/presentation/app_components/widgets/app_bar_widget.dart';
 import 'package:spotify_clone/presentation/app_components/widgets/clickable_container.dart';
-import 'package:spotify_clone/presentation/app_components/widgets/named_widget.dart';
 import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
-import 'package:spotify_clone/presentation/app_ui/app_text/app_text.dart';
-import 'package:spotify_clone/presentation/pages/welcome_page/view/widgets/playlist_grid_builder.dart';
+import 'package:spotify_clone/presentation/app_ui/app_text/locale_text.dart';
+import 'package:spotify_clone/presentation/pages/welcome_page/view/widgets/named_grid_list_builder.dart';
+import 'package:spotify_clone/presentation/pages/welcome_page/view/widgets/user_playlist_grid_builder.dart';
+import '../../../app_components/widgets/app_navigation_bar.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({Key? key}) : super(key: key);
@@ -13,26 +14,56 @@ class WelcomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const AppNavigationBar(),
       backgroundColor: AppColor.instance.spotifyDark,
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             children: [
-              NamedWidget(
-                text: LocaleText.instance.welcomeText,
-                textStyle: GoogleFonts.openSans(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.sp,
+              SizedBox(
+                height: 20.h,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16),
+                child: AppBarWidget(
+                  text: LocaleText.instance.welcomeText,
+                  actions: [
+                    ClickableContainer(
+                      onTap: (() {}),
+                      child: const Icon(
+                        Icons.notifications_none_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    ClickableContainer(
+                      onTap: (() {}),
+                      child: const Icon(
+                        Icons.av_timer_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    ClickableContainer(
+                      onTap: (() {}),
+                      child: const Icon(
+                        Icons.settings_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
-                iconButton: ClickableContainer(
-                    onTap: (() {}),
-                    child: const Icon(
-                      Icons.settings,
-                      color: Colors.white,
-                    )),
-                child: const PlaylistGridBuilder(),
+              ),
+              SizedBox(
+                height: 25.h,
+              ),
+              const UserPlaylistGridBuilder(),
+              SizedBox(
+                height: 36.h,
+              ),
+              NamedGridListBuilder(
+                title: LocaleText.instance.welcomeText,
+                subTitle: LocaleText.instance.welcomeText,
               ),
             ],
           ),
