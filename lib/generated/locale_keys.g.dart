@@ -2,5 +2,6 @@
 
 abstract class  LocaleKeys {
   static const good_morning = 'good_morning';
+  static const recently_played = 'recently_played';
 
 }

@@ -13,7 +13,7 @@ class LibraryView extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: SafeArea(
           child: Column(
-            children: [
+            children: const [
               LibrarySortBar(),
             ],
           ),

@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:spotify_clone/presentation/app_components/widgets/app_asset_button.dart';
+import 'package:spotify_clone/presentation/app_components/widgets/app_image_widget.dart';
 import 'package:spotify_clone/presentation/app_components/widgets/simple_button.dart';
+import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
+
+import '../../../../../generated/locale_keys.g.dart';
+import '../../../../app_ui/app_image/app_image.dart';
 
 class LibrarySortBar extends StatelessWidget {
   const LibrarySortBar({Key? key}) : super(key: key);
@@ -10,8 +18,25 @@ class LibrarySortBar extends StatelessWidget {
       children: [
         SimpleButton(
           onTap: (() {}),
-          child: Row(),
+          child: Row(
+            children: [
+              AppImageWidget(
+                  name: AppImage.instance.iconFilter, height: 24, width: 24),
+              SizedBox(width: 6.w),
+              Text(
+                LocaleKeys.recently_played,
+                style: GoogleFonts.openSans(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 10.sp,
+                  color: AppColor.instance.lightGrey,
+                ),
+              ),
+            ],
+          ),
         ),
+        const Spacer(),
+        AppAssetButton(
+            path: AppImage.instance.iconGridLayout, width: 24, height: 24),
       ],
     );
   }
