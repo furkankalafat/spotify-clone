@@ -4,8 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:spotify_clone/presentation/app_components/widgets/clickable_container.dart';
 import 'package:spotify_clone/presentation/app_components/widgets/named_widget.dart';
 import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
-import 'package:spotify_clone/presentation/app_ui/app_text/app_text.dart';
 import 'package:spotify_clone/presentation/pages/welcome_page/view/widgets/playlist_grid_builder.dart';
+
+import '../../../../generated/locale_keys.g.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class WelcomeView extends StatelessWidget {
           child: Column(
             children: [
               NamedWidget(
-                text: LocaleText.instance.welcomeText,
+                text: LocaleKeys.good_morning,
                 textStyle: GoogleFonts.openSans(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
