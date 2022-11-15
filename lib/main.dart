@@ -1,25 +1,24 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
+import 'package:spotify_clone/core/init/language/language_manager.dart';
 import 'package:spotify_clone/presentation/pages/library_page/view/library_view.dart';
 import 'package:spotify_clone/presentation/pages/welcome_page/view/welcome_view.dart';
+import 'package:spotify_clone/presentation/spotify_app.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  initializeApp();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(375, 812),
-      builder: (context, child) {
-        return const GetMaterialApp(
-          home: WelcomeView(),
-        );
-      },
-    );
-  }
+Future<void> initializeApp() async {
+  final easyLocalization = EasyLocalization(
+    supportedLocales: LanguageManager.instance.supportedLocales,
+    path: LanguageManager.instance.path,
+    useFallbackTranslations: true,
+    child: const SpotifyApp(
+      home: LibraryView(),
+    ),
+  );
+  runApp(easyLocalization);
 }

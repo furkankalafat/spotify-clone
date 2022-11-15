@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:spotify_clone/core/components/text/locale_text.dart';
 
 class AppBarWidget extends StatelessWidget {
   final Widget? leading;
@@ -26,9 +27,9 @@ class AppBarWidget extends StatelessWidget {
             SizedBox(
               width: 5.w,
             ),
-            Text(
+            LocaleText(
               text,
-              style: GoogleFonts.openSans(
+              textStyle: GoogleFonts.openSans(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 20.sp,
