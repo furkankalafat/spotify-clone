@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:spotify_clone/generated/locale_keys.g.dart';
 import 'package:spotify_clone/presentation/app_components/widgets/app_bar_widget.dart';
 import 'package:spotify_clone/presentation/app_components/widgets/clickable_container.dart';
 import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
-import 'package:spotify_clone/presentation/app_ui/app_text/locale_text.dart';
 import 'package:spotify_clone/presentation/pages/welcome_page/view/widgets/named_grid_list_builder.dart';
 import 'package:spotify_clone/presentation/pages/welcome_page/view/widgets/user_playlist_grid_builder.dart';
 import '../../../app_components/widgets/app_navigation_bar.dart';
@@ -26,7 +26,7 @@ class WelcomeView extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 16, right: 16),
                 child: AppBarWidget(
-                  text: LocaleText.instance.welcomeText,
+                  text: LocaleKeys.good_morning,
                   actions: [
                     ClickableContainer(
                       onTap: (() {}),
@@ -61,9 +61,9 @@ class WelcomeView extends StatelessWidget {
               SizedBox(
                 height: 36.h,
               ),
-              NamedGridListBuilder(
-                title: LocaleText.instance.welcomeText,
-                subTitle: LocaleText.instance.welcomeText,
+              const NamedGridListBuilder(
+                title: LocaleKeys.good_morning,
+                subTitle: LocaleKeys.good_morning,
               ),
             ],
           ),

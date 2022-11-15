@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:spotify_clone/generated/locale_keys.g.dart';
 import 'package:spotify_clone/presentation/app_components/widgets/clickable_container.dart';
 import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
-import 'package:spotify_clone/presentation/app_ui/app_text/locale_text.dart';
+import '../../../../../core/components/text/locale_text.dart';
 
 class UserPlaylistGridItem extends StatelessWidget {
   final int index;
@@ -33,9 +34,9 @@ class UserPlaylistGridItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(
                   left: 8, top: 14, bottom: 14, right: 16),
-              child: Text(
-                LocaleText.instance.welcomeText,
-                style: GoogleFonts.openSans(
+              child: LocaleText(
+                LocaleKeys.good_morning,
+                textStyle: GoogleFonts.openSans(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 10.sp,
