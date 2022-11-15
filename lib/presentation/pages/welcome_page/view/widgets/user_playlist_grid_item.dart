@@ -7,10 +7,8 @@ import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
 import '../../../../../core/components/text/locale_text.dart';
 
 class UserPlaylistGridItem extends StatelessWidget {
-  final int index;
   const UserPlaylistGridItem({
     Key? key,
-    required this.index,
   }) : super(key: key);
 
   @override

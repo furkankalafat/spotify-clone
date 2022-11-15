@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:spotify_clone/core/components/text/locale_text.dart';
 import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
 
 import '../../../../app_components/widgets/clickable_container.dart';
@@ -32,9 +33,9 @@ class FeaturedPlaylistGridItem extends StatelessWidget {
           SizedBox(
             height: 4.h,
           ),
-          Text(
+          LocaleText(
             title ?? "",
-            style: GoogleFonts.openSans(
+            textStyle: GoogleFonts.openSans(
               fontWeight: FontWeight.bold,
               fontSize: 10.sp,
               color: AppColor.instance.spotifyWhite,
@@ -43,9 +44,9 @@ class FeaturedPlaylistGridItem extends StatelessWidget {
           SizedBox(
             height: 4.h,
           ),
-          Text(
+          LocaleText(
             subTitle ?? "",
-            style: GoogleFonts.openSans(
+            textStyle: GoogleFonts.openSans(
               fontWeight: FontWeight.w500,
               fontSize: 10.sp,
               color: AppColor.instance.lightGrey,

@@ -16,8 +16,8 @@ class WelcomeView extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: const AppNavigationBar(),
       backgroundColor: AppColor.instance.spotifyDark,
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Column(
             children: [
               SizedBox(

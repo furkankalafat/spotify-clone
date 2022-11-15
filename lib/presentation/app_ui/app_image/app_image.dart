@@ -16,4 +16,5 @@ class AppImage {
   final String iconAdd = '${_icons}icon_add.png';
   final String iconSearchOutlined = '${_icons}icon_search_outlined.png';
   final String iconGridLayout = '${_icons}icon_grid_layout.png';
+  final String iconListLayout = '${_icons}icon_list_layout.png';
 }
