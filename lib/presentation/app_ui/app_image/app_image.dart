@@ -28,4 +28,5 @@ class AppImage {
   final String iconDevices = '${_icons}icon_devices.png';
   final String iconDown = '${_icons}icon_down.png';
   final String iconListPlaying = '${_icons}icon_list_playing.png';
+  final String iconMenuDots = '${_icons}icon_menu_dots.png';
 }
