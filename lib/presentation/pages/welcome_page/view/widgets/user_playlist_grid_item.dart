@@ -32,9 +32,9 @@ class UserPlaylistGridItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(
                   left: 8, top: 14, bottom: 14, right: 16),
-              child: LocaleText(
-                LocaleKeys.good_morning,
-                textStyle: GoogleFonts.openSans(
+              child: Text(
+                "Reathe Main",
+                style: GoogleFonts.openSans(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 10.sp,

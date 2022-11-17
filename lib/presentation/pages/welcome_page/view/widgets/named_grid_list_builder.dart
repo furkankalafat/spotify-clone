@@ -20,14 +20,21 @@ class NamedGridListBuilder extends StatelessWidget {
       'Hip-Hop',
       'Blues',
     ];
+    final List<String> playlistItem = [
+      'Reathe TR',
+      'Reathe Eskiler',
+      'Reathe Damar',
+      'Reathe Main',
+      'Happy Hour',
+    ];
     return ListView.separated(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: ((context, index) => NamedGridList(
               text: featuredGenres[index],
               child: FeaturedPlaylistGridBuilder(
-                title: title,
-                subTitle: subTitle,
+                title: playlistItem[index],
+                subTitle: playlistItem[index],
               ),
             )),
         separatorBuilder: (context, index) {

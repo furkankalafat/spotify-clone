@@ -13,6 +13,9 @@ class ListLayout extends StatelessWidget {
       'Reathe Damar',
       'Reathe Main',
       'Happy Hour',
+      'Türkçe Rap',
+      'TOFAŞLA YANLAMALIK',
+      'Reathe JAM',
     ];
     return ListView.separated(
         shrinkWrap: true,

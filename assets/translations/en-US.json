@@ -1,4 +1,7 @@
 {
+    "home": "Home",
+    "search":"Search",
+    "your_library": "Your Library",
     "good_morning" : "Good Morning",
     "recently_played": "Recently played"
 }
