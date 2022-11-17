@@ -20,6 +20,7 @@ class _SpotifyAppState extends State<SpotifyApp> {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       builder: (context, child) => GetMaterialApp(
+        theme: ThemeData.dark(),
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,

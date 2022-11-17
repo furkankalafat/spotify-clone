@@ -13,10 +13,12 @@ class GridLayout extends StatelessWidget {
       'Reathe Damar',
       'Reathe Main',
       'Happy Hour',
-      'Reathe JAM'
+      'Türkçe Rap',
+      'TOFAŞLA YANLAMALIK',
+      'Reathe JAM',
     ];
     final gridPlaylist = List<FeaturedPlaylistGridItem>.generate(
-        6,
+        playlistItem.length,
         (index) => FeaturedPlaylistGridItem(
               title: playlistItem[index],
               subTitle: playlistItem[index],

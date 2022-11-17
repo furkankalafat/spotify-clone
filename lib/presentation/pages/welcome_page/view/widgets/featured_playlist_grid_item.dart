@@ -33,9 +33,9 @@ class FeaturedPlaylistGridItem extends StatelessWidget {
           SizedBox(
             height: 4.h,
           ),
-          LocaleText(
+          Text(
             title ?? "",
-            textStyle: GoogleFonts.openSans(
+            style: GoogleFonts.openSans(
               fontWeight: FontWeight.bold,
               fontSize: 10.sp,
               color: AppColor.instance.spotifyWhite,
@@ -44,9 +44,9 @@ class FeaturedPlaylistGridItem extends StatelessWidget {
           SizedBox(
             height: 4.h,
           ),
-          LocaleText(
+          Text(
             subTitle ?? "",
-            textStyle: GoogleFonts.openSans(
+            style: GoogleFonts.openSans(
               fontWeight: FontWeight.w500,
               fontSize: 10.sp,
               color: AppColor.instance.lightGrey,
