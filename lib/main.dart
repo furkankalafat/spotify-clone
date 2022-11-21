@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/core/init/language/language_manager.dart';
 import 'package:spotify_clone/presentation/pages/library_page/view/library_view.dart';
+import 'package:spotify_clone/presentation/pages/player_page/view/player_view.dart';
 import 'package:spotify_clone/presentation/pages/welcome_page/view/welcome_view.dart';
 import 'package:spotify_clone/presentation/spotify_app.dart';
 
@@ -17,7 +18,7 @@ Future<void> initializeApp() async {
     path: LanguageManager.instance.path,
     useFallbackTranslations: true,
     child: const SpotifyApp(
-      home: LibraryView(),
+      home: PlayerView(),
     ),
   );
   runApp(easyLocalization);

@@ -13,7 +13,7 @@ class TitlePlaying extends StatelessWidget {
         Padding(
             padding: const EdgeInsets.all(20),
             child: LocaleText(
-              LocaleKeys.good_morning,
+              LocaleKeys.now_playing,
               textStyle: GoogleFonts.openSans(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
