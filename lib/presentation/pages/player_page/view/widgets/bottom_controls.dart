@@ -9,6 +9,7 @@ class BottomControls extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         AppAssetButton(path: AppImage.instance.iconDevices, width: 64, height: 64, color: AppColor.instance.spotifyWhite),
         AppAssetButton(path: AppImage.instance.iconListPlaying, width: 64, height: 64, color: AppColor.instance.spotifyWhite)

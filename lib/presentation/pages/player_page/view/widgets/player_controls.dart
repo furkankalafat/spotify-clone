@@ -9,19 +9,18 @@ class PlayerControls extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        children: <Widget>[
-          AppAssetButton(path: AppImage.instance.iconPlayerShuffle, width: 64, height: 64, color: AppColor.instance.spotifyWhite),
-          AppAssetButton(path: AppImage.instance.iconPlayerBack, width: 64, height: 64, color: AppColor.instance.spotifyWhite),
-          ClickableContainer(
-              onTap: () {},
-              child: AppAssetButton(path: AppImage.instance.iconPlayerPause, width: 64, height: 64)
-          ),
-          AppAssetButton(path: AppImage.instance.iconPlayerSkip, width: 64, height: 64, color: AppColor.instance.spotifyWhite),
-          AppAssetButton(path: AppImage.instance.iconRepeat, width: 64, height: 64, color: AppColor.instance.spotifyWhite)
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        AppAssetButton(path: AppImage.instance.iconPlayerShuffle, width: 64, height: 64, color: AppColor.instance.spotifyWhite),
+        AppAssetButton(path: AppImage.instance.iconPlayerBack, width: 64, height: 64, color: AppColor.instance.spotifyWhite),
+        ClickableContainer(
+            onTap: () {},
+            child: AppAssetButton(path: AppImage.instance.iconPlayerPause, width: 64, height: 64)
+        ),
+        AppAssetButton(path: AppImage.instance.iconPlayerSkip, width: 64, height: 64, color: AppColor.instance.spotifyWhite),
+        AppAssetButton(path: AppImage.instance.iconRepeat, width: 64, height: 64, color: AppColor.instance.spotifyWhite)
+      ],
     );
   }
 }
