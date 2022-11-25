@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/presentation/app_components/widgets/app_asset_button.dart';
-import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
-import 'package:spotify_clone/presentation/app_ui/app_image/app_image.dart';
+
+import '../../../../app_components/widgets/app_asset_button.dart';
+import '../../../../app_ui/app_color/app_color.dart';
+import '../../../../app_ui/app_image/app_image.dart';
 
 class BottomControls extends StatelessWidget {
   const BottomControls({Key? key}) : super(key: key);
