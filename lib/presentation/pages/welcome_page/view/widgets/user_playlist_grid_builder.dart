@@ -8,10 +8,7 @@ class UserPlaylistGridBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final gridPlaylist = List<UserPlaylistGridItem>.generate(
-        6,
-        (index) => UserPlaylistGridItem(
-              index: index,
-            ));
+        6, (index) => const UserPlaylistGridItem());
     return Wrap(
       spacing: 9.w,
       runSpacing: 8.h,

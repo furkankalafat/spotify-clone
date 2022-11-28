@@ -6,7 +6,6 @@ import 'package:spotify_clone/presentation/app_components/widgets/clickable_cont
 import 'package:spotify_clone/presentation/app_ui/app_color/app_color.dart';
 import 'package:spotify_clone/presentation/pages/welcome_page/view/widgets/named_grid_list_builder.dart';
 import 'package:spotify_clone/presentation/pages/welcome_page/view/widgets/user_playlist_grid_builder.dart';
-import '../../../app_components/widgets/app_navigation_bar.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({Key? key}) : super(key: key);
@@ -14,10 +13,9 @@ class WelcomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const AppNavigationBar(),
       backgroundColor: AppColor.instance.spotifyDark,
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Column(
             children: [
               SizedBox(
@@ -61,10 +59,7 @@ class WelcomeView extends StatelessWidget {
               SizedBox(
                 height: 36.h,
               ),
-              const NamedGridListBuilder(
-                title: LocaleKeys.good_morning,
-                subTitle: LocaleKeys.good_morning,
-              ),
+              const NamedGridListBuilder(),
             ],
           ),
         ),

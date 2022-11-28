@@ -13,12 +13,14 @@ void main() async {
 }
 
 Future<void> initializeApp() async {
+  final Widget home;
+  home = const AppTabBarView();
   final easyLocalization = EasyLocalization(
     supportedLocales: LanguageManager.instance.supportedLocales,
     path: LanguageManager.instance.path,
     useFallbackTranslations: true,
-    child: const SpotifyApp(
-      home: LibraryView(),
+    child: SpotifyApp(
+      home: home,
     ),
   );
   runApp(easyLocalization);
