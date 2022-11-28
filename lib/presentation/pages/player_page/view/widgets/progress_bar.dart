@@ -22,6 +22,7 @@ class _AudioProgressBarState extends State<AudioProgressBar> {
       timeLabelTextStyle: TextStyle(
         color: AppColor.instance.spotifyWhite,
       ),
+      timeLabelPadding: 3,
       progress: Duration(milliseconds: 1000),
       total: Duration(milliseconds: 5000),
       onSeek: (duration) {
