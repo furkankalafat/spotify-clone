@@ -7,8 +7,7 @@ class AlbumCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 512.w,
-      height: 375.h,
+      width: 375.w,
       child: Image.asset(
         "assets/images/profile_photo.png",
       ),

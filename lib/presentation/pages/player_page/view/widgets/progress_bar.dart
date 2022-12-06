@@ -1,5 +1,7 @@
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../app_ui/app_color/app_color.dart';
 
@@ -17,12 +19,14 @@ class _AudioProgressBarState extends State<AudioProgressBar> {
       progressBarColor: AppColor.instance.spotifyWhite,
       baseBarColor: Colors.grey,
       thumbColor: AppColor.instance.spotifyWhite,
-      barHeight: 4,
-      thumbRadius: 5,
-      timeLabelTextStyle: TextStyle(
+      barHeight: 5,
+      thumbRadius: 8,
+      timeLabelTextStyle: GoogleFonts.openSans(
         color: AppColor.instance.spotifyWhite,
+        fontWeight: FontWeight.w700,
+        fontSize: 12.sp,
       ),
-      timeLabelPadding: 3,
+      timeLabelPadding: 10,
       progress: Duration(milliseconds: 1000),
       total: Duration(milliseconds: 5000),
       onSeek: (duration) {

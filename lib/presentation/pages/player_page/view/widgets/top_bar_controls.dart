@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../core/components/text/locale_text.dart';
@@ -22,15 +23,15 @@ class TopBarControls extends StatelessWidget {
           textStyle: GoogleFonts.openSans(
             color: AppColor.instance.spotifyWhite,
             fontWeight: FontWeight.w600,
-            fontSize: 12,
+            fontSize: 12.sp,
           ),
         ),
         ClickableContainer(
           onTap: () {},
           child: AppAssetButton(
             path: AppImage.instance.iconMenuDots,
-            width: 64,
-            height: 64,
+            width: 64.w,
+            height: 64.h,
             color: AppColor.instance.spotifyWhite,
           ),
         ),

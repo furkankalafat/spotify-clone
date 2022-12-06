@@ -15,19 +15,26 @@ class PlayerView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.instance.spotifyDark,
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: const <Widget>[
-            TopBarControls(),
-            AlbumCard(),
-            TitlePlaying(),
-            AudioProgressBar(),
-            PlayerControls(),
-            BottomControls()
-          ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: _buildPlayer()
         ),
       ),
     );
   }
+}
+
+Widget _buildPlayer() {
+  return Wrap(
+    runSpacing: 15,
+    children: <Widget>[
+      TopBarControls(),
+      AlbumCard(),
+      TitlePlaying(),
+      AudioProgressBar(),
+      PlayerControls(),
+      BottomControls(),
+    ],
+  );
 }

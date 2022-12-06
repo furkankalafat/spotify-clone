@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../core/components/text/locale_text.dart';
@@ -16,20 +17,36 @@ class TitlePlaying extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        LocaleText(
-          LocaleKeys.now_playing,
-          textStyle: GoogleFonts.openSans(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 15,
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              LocaleText(
+                LocaleKeys.now_playing,
+                maxLines: 2,
+                textStyle: GoogleFonts.openSans(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15.sp,
+                ),
+              ),
+              LocaleText(
+                LocaleKeys.now_playing,
+                maxLines: 2,
+                textStyle: GoogleFonts.openSans(
+                  color: Colors.white70,
+                  fontSize: 12.sp,
+                ),
+              ),
+            ],
           ),
         ),
         ClickableContainer(
           onTap: () {},
           child: AppAssetButton(
             path: AppImage.instance.iconHeartOutlined,
-            width: 64,
-            height: 64,
+            width: 64.w,
+            height: 64.h,
             color: AppColor.instance.spotifyWhite,
           ),
         )
